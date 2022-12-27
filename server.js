@@ -1,5 +1,5 @@
 'use strict';
-
+r=0;
 const express = require('express');
 const { Server } = require('ws');
 
@@ -17,6 +17,28 @@ wss.on('connection', (ws) => {
   ws.on('close', () => console.log('Client disconnected'));
 });
 
+
+function makeid(length) {
+
+    var result           = '';
+
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    var charactersLength = characters.length;
+
+    for ( var i = 0; i < length; i++ ) {
+
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+    }
+
+    return result;
+
+}
+
+
+
+
 setInterval(() => {
   wss.clients.forEach((client) => {
 
@@ -30,8 +52,8 @@ function generate_token(length){
     }
     return b.join("");
 }
-
-
-    client.send(generate_token(64));
+r++;  
+client.send('Request No = ' + r + ' Time = ' + aa + ' Id = ' + makeid(5));
+    //client.send(generate_token(64));
   });
 }, 1);
