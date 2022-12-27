@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-"//1": "describes your app and its dependencies",
-
-  "//2": "https://docs.npmjs.com/files/package.json",
-
-  "//3": "updating this file will download and update your packages",
-
   "name": "hello-express",
 
   "version": "0.0.1",
@@ -42,7 +29,7 @@
 
     "url": "https://glitch.com/edit/#!/hello-express"
 
-  },
+  }, 
 
   "license": "MIT",
 
