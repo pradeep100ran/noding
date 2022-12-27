@@ -1,5 +1,5 @@
 'use strict';
-r=0;
+var r=0;
 const express = require('express');
 const { Server } = require('ws');
 
